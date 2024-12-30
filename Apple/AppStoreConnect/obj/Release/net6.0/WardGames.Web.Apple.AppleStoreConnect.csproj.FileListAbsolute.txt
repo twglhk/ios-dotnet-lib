@@ -1,0 +1,14 @@
+/Users/sinjongha/wkspaces/WardGamesDevLibrary/WardGamesWebLibrary/dotNet/Apple/AppStoreConnect/bin/Release/net6.0/WardGames.Web.Apple.AppStoreConnect.deps.json
+/Users/sinjongha/wkspaces/WardGamesDevLibrary/WardGamesWebLibrary/dotNet/Apple/AppStoreConnect/bin/Release/net6.0/WardGames.Web.Apple.AppStoreConnect.dll
+/Users/sinjongha/wkspaces/WardGamesDevLibrary/WardGamesWebLibrary/dotNet/Apple/AppStoreConnect/bin/Release/net6.0/WardGames.Web.Apple.AppStoreConnect.pdb
+/Users/sinjongha/wkspaces/WardGamesDevLibrary/WardGamesWebLibrary/dotNet/Apple/AppStoreConnect/bin/Release/net6.0/WardGames.Web.Apple.AppStoreConnect.xml
+/Users/sinjongha/wkspaces/WardGamesDevLibrary/WardGamesWebLibrary/dotNet/Apple/AppStoreConnect/obj/Release/net6.0/WardGames.Web.Apple.AppleStoreConnect.csproj.AssemblyReference.cache
+/Users/sinjongha/wkspaces/WardGamesDevLibrary/WardGamesWebLibrary/dotNet/Apple/AppStoreConnect/obj/Release/net6.0/WardGames.Web.Apple.AppleStoreConnect.GeneratedMSBuildEditorConfig.editorconfig
+/Users/sinjongha/wkspaces/WardGamesDevLibrary/WardGamesWebLibrary/dotNet/Apple/AppStoreConnect/obj/Release/net6.0/WardGames.Web.Apple.AppleStoreConnect.AssemblyInfoInputs.cache
+/Users/sinjongha/wkspaces/WardGamesDevLibrary/WardGamesWebLibrary/dotNet/Apple/AppStoreConnect/obj/Release/net6.0/WardGames.Web.Apple.AppleStoreConnect.AssemblyInfo.cs
+/Users/sinjongha/wkspaces/WardGamesDevLibrary/WardGamesWebLibrary/dotNet/Apple/AppStoreConnect/obj/Release/net6.0/WardGames.Web.Apple.AppleStoreConnect.csproj.CoreCompileInputs.cache
+/Users/sinjongha/wkspaces/WardGamesDevLibrary/WardGamesWebLibrary/dotNet/Apple/AppStoreConnect/obj/Release/net6.0/WardGames.Web.Apple.AppStoreConnect.dll
+/Users/sinjongha/wkspaces/WardGamesDevLibrary/WardGamesWebLibrary/dotNet/Apple/AppStoreConnect/obj/Release/net6.0/refint/WardGames.Web.Apple.AppStoreConnect.dll
+/Users/sinjongha/wkspaces/WardGamesDevLibrary/WardGamesWebLibrary/dotNet/Apple/AppStoreConnect/obj/Release/net6.0/WardGames.Web.Apple.AppStoreConnect.xml
+/Users/sinjongha/wkspaces/WardGamesDevLibrary/WardGamesWebLibrary/dotNet/Apple/AppStoreConnect/obj/Release/net6.0/WardGames.Web.Apple.AppStoreConnect.pdb
+/Users/sinjongha/wkspaces/WardGamesDevLibrary/WardGamesWebLibrary/dotNet/Apple/AppStoreConnect/obj/Release/net6.0/ref/WardGames.Web.Apple.AppStoreConnect.dll

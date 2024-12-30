@@ -1,0 +1,82 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/sinjongha/wkspaces/WardGamesDevLibrary/WardGamesWebLibrary/dotNet/Apple/AppStoreConnect/src/InAppPurchase/InAppPurchasePriceSchedules/Endpoints/ReadPriceInformationEndPoint.cs" relfile="src/InAppPurchase/InAppPurchasePriceSchedules/Endpoints/ReadPriceInformationEndPoint.cs" line="33" column="1" />
+      <Breakpoint file="/Users/sinjongha/wkspaces/WardGamesDevLibrary/WardGamesWebLibrary/dotNet/Apple/AppStoreConnect/src/InAppPurchase/InAppPurchasePriceSchedules/Endpoints/ReadPriceInformationEndPoint.cs" relfile="src/InAppPurchase/InAppPurchasePriceSchedules/Endpoints/ReadPriceInformationEndPoint.cs" line="27" column="1" />
+      <Breakpoint file="/Users/sinjongha/wkspaces/WardGamesDevLibrary/WardGamesWebLibrary/dotNet/Apple/AppStoreConnect/src/InAppPurchase/InAppPurchases/Endpoints/ListAllInAppPurchasesEndPoint.cs" relfile="src/InAppPurchase/InAppPurchases/Endpoints/ListAllInAppPurchasesEndPoint.cs" line="25" column="1" />
+      <Breakpoint file="/Users/sinjongha/wkspaces/WardGamesDevLibrary/WardGamesWebLibrary/dotNet/Apple/AppStoreConnect/src/InAppPurchase/InAppPurchases/Endpoints/ListAllInAppPurchasesEndPoint.cs" relfile="src/InAppPurchase/InAppPurchases/Endpoints/ListAllInAppPurchasesEndPoint.cs" line="31" column="1" />
+      <Breakpoint file="/Users/sinjongha/wkspaces/WardGamesDevLibrary/WardGamesWebLibrary/dotNet/Apple/AppStoreConnect/src/Common/AppStoreConnectAPIHelper.cs" relfile="src/Common/AppStoreConnectAPIHelper.cs" line="15" column="1" />
+      <Breakpoint file="/Users/sinjongha/wkspaces/WardGamesDevLibrary/WardGamesWebLibrary/dotNet/Apple/AppStoreConnect/src/Common/AppStoreConnectAPIHelper.cs" relfile="src/Common/AppStoreConnectAPIHelper.cs" line="20" column="1" />
+      <Breakpoint file="/Users/sinjongha/wkspaces/WardGamesDevLibrary/WardGamesWebLibrary/dotNet/Apple/AppStoreConnect/test/Program.cs" relfile="test/Program.cs" line="68" column="1" />
+      <Breakpoint file="/Users/sinjongha/wkspaces/WardGamesDevLibrary/WardGamesWebLibrary/dotNet/Apple/AppStoreConnect/test/Program.cs" relfile="test/Program.cs" line="69" column="1" />
+      <Breakpoint file="/Users/sinjongha/wkspaces/WardGamesDevLibrary/WardGamesWebLibrary/dotNet/Apple/AppStoreConnect/src/InAppPurchase/InAppPurchaseLocalization/Endpoints/ListAllLocalizationsEndpoint.cs" relfile="src/InAppPurchase/InAppPurchaseLocalization/Endpoints/ListAllLocalizationsEndpoint.cs" line="30" column="1" />
+      <Breakpoint file="/Users/sinjongha/wkspaces/WardGamesDevLibrary/WardGamesWebLibrary/dotNet/Apple/AppStoreConnect/src/InAppPurchase/InAppPurchaseLocalization/Endpoints/ListAllLocalizationsEndpoint.cs" relfile="src/InAppPurchase/InAppPurchaseLocalization/Endpoints/ListAllLocalizationsEndpoint.cs" line="25" column="1" />
+      <Breakpoint file="/Users/sinjongha/wkspaces/WardGamesDevLibrary/WardGamesWebLibrary/dotNet/Apple/AppStoreConnect/src/Common/AppStoreConnectAPIHelper.cs" relfile="src/Common/AppStoreConnectAPIHelper.cs" line="37" column="1" />
+      <Breakpoint file="/Users/sinjongha/wkspaces/WardGamesDevLibrary/WardGamesWebLibrary/dotNet/Apple/AppStoreConnect/src/Common/AppStoreConnectAPIHelper.cs" relfile="src/Common/AppStoreConnectAPIHelper.cs" line="51" column="1" />
+      <Breakpoint file="/Users/sinjongha/wkspaces/WardGamesDevLibrary/WardGamesWebLibrary/dotNet/Apple/AppStoreConnect/src/Common/AppStoreConnectAPIHelper.cs" relfile="src/Common/AppStoreConnectAPIHelper.cs" line="57" column="1" />
+      <Breakpoint file="/Users/sinjongha/wkspaces/WardGamesDevLibrary/WardGamesWebLibrary/dotNet/Apple/AppStoreConnect/src/Common/AppStoreConnectAPIHelper.cs" relfile="src/Common/AppStoreConnectAPIHelper.cs" line="76" column="1" />
+      <Breakpoint file="/Users/sinjongha/wkspaces/WardGamesDevLibrary/WardGamesWebLibrary/dotNet/Apple/AppStoreConnect/src/Common/AppStoreConnectAPIHelper.cs" relfile="src/Common/AppStoreConnectAPIHelper.cs" line="86" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="build.sh">
+    <Files>
+      <File FileName="test/AppStoreConnectTestData.cs" Line="20" Column="51" />
+      <File FileName="test/Program.cs" Line="75" Column="79" />
+      <File FileName="src/Common/AppStoreConnectAPIObjectConverter.cs" Line="52" Column="1" />
+      <File FileName="src/InAppPurchase/InAppPurchasePriceSchedules/Endpoints/ReadPriceInformationEndPoint.cs" Line="34" Column="1" />
+      <File FileName="src/InAppPurchase/InAppPurchases/Objects/InAppPurchasesV2Response.cs" Line="13" Column="35" />
+      <File FileName="src/InAppPurchase/InAppPurchases/Objects/InAppPurchaseV2.cs" Line="14" Column="35" />
+      <File FileName="src/InAppPurchase/InAppPurchasePriceSchedules/Objects/InAppPurchasePricesResponse.cs" Line="13" Column="1" />
+      <File FileName="src/Common/AppStoreConnectResponse.cs" Line="15" Column="1" />
+      <File FileName="src/InAppPurchase/InAppPurchases/Endpoints/ListAllInAppPurchasesEndPoint.cs" Line="19" Column="23" />
+      <File FileName="src/InAppPurchase/InAppPurchasePriceSchedules/QueryParams/ReadPriceInformationParamContainer.cs" Line="24" Column="9" />
+      <File FileName="src/InAppPurchase/InAppPurchases/Objects/InAppPurchaseV2Attributes.cs" Line="15" Column="9" />
+      <File FileName="src/InAppPurchase/InAppPurchases/QueryParams/ListAllInAppPurchasesParamContainer.cs" Line="20" Column="13" />
+      <File FileName="src/Common/AppStoreConnectQueryParamContainer.cs" Line="25" Column="2" />
+      <File FileName="src/Common/AppStoreConnectQueryParamField.cs" Line="14" Column="47" />
+      <File FileName="src/InAppPurchase/InAppPurchasePriceSchedules/QueryParams/ReadPriceInformationParamInclude.cs" Line="26" Column="37" />
+      <File FileName="src/InAppPurchase/InAppPurchases/QueryParams/FieldsInAppPurchaseContents.cs" Line="35" Column="1" />
+      <File FileName="src/InAppPurchase/InAppPurchases/QueryParams/FieldsInAppPurchaseLocalizations.cs" Line="37" Column="30" />
+      <File FileName="src/InAppPurchase/InAppPurchases/QueryParams/ListAllInAppPurchasesParamInclude.cs" Line="33" Column="26" />
+      <File FileName="src/Common/AppStoreConnectQueryParamInclude.cs" Line="15" Column="2" />
+      <File FileName="src/Common/AppStoreConnectQueryParamFilter.cs" Line="1" Column="1" />
+      <File FileName="src/Common/AppStoreConnectQueryParamBase.cs" Line="39" Column="23" />
+      <File FileName="WardGames.Web.Apple.AppleStoreConnect.sln" Line="1" Column="1" />
+      <File FileName="CHANGELOG.md" Line="14" Column="12" />
+      <File FileName="build.sh" Line="16" Column="13" />
+      <File FileName="src/InAppPurchase/InAppPurchaseLocalization/Endpoints/ListAllLocalizationsEndpoint.cs" Line="31" Column="1" />
+      <File FileName="WardGames.Web.Apple.AppleStoreConnect.csproj" Line="24" Column="1" />
+      <File FileName="src/Common/AppStoreConnectAPIHelper.cs" Line="23" Column="69" NotebookId="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="WardGames.Web.Apple.AppleStoreConnect" expanded="True">
+            <Node name="WardGames.Web.Apple.AppleStoreConnect" expanded="True">
+              <Node name="Dependencies" expanded="True">
+                <Node name="FrameworkReferences" expanded="True" />
+                <Node name="PackageDependencies" expanded="True" />
+              </Node>
+              <Node name="src" expanded="True">
+                <Node name="Common" expanded="True" />
+                <Node name="InAppPurchase" expanded="True">
+                  <Node name="InAppPurchaseLocalization" expanded="True">
+                    <Node name="Endpoints" expanded="True" />
+                  </Node>
+                </Node>
+              </Node>
+              <Node name="test" expanded="True" />
+              <Node name="build.sh" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+</Properties>

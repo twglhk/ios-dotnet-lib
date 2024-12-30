@@ -1,0 +1,777 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WardGames.Web.Apple.AppStoreConnect</name>
+    </assembly>
+    <members>
+        <member name="T:WardGames.Web.Apple.AppStoreConnect.AppStoreConnectAPIObjectConverter">
+            <summary>
+            App Store Connect API 객체를 위한 JSON 컨버터입니다.
+            이 컨버터는 JSON 객체의 'type' 필드를 기반으로 특정 클래스로의 역직렬화를 선택하여 App Store Connect API 객체의 목록을 처리합니다.
+            </summary>
+        </member>
+        <member name="M:WardGames.Web.Apple.AppStoreConnect.AppStoreConnectAPIObjectConverter.CanConvert(System.Type)">
+            <summary>
+            이 컨버터가 변환 가능한 타입인지 확인합니다.
+            이 커스텀 컨버터는 변환할 해당 오브젝트의 타입이 <see cref="T:WardGames.Web.Apple.AppStoreConnect.IAppStoreConnectAPIObject"/>의 List인지 확인합니다.
+            </summary>
+            <param name="objectType">확인할 타입</param>
+            <returns>변환 가능한 경우 true를 반환합니다.</returns>
+        </member>
+        <member name="M:WardGames.Web.Apple.AppStoreConnect.AppStoreConnectAPIObjectConverter.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Object,Newtonsoft.Json.JsonSerializer)">
+            <summary>
+            JSON을 읽어서 객체로 변환합니다.
+            JSON 객체의 'type' 필드를 기반으로 특정 클래스로 역직렬화하고 결과 목록에 추가합니다.
+            </summary>
+            <param name="reader">JSON을 읽는 데 사용되는 JsonReader 객체</param>
+            <param name="objectType">대상 객체 타입</param>
+            <param name="existingValue">변경 중인 객체의 현재 값</param>
+            <param name="serializer">사용되는 JsonSerializer</param>
+            <returns>역직렬화된 객체를 반환합니다.</returns>
+        </member>
+        <member name="M:WardGames.Web.Apple.AppStoreConnect.AppStoreConnectAPIObjectConverter.WriteJson(Newtonsoft.Json.JsonWriter,System.Object,Newtonsoft.Json.JsonSerializer)">
+            <summary>
+            객체를 JSON으로 쓰는 메소드입니다.
+            이 컨버터는 역직렬화만을 담당하므로, 이 메소드는 구현되지 않았습니다.
+            </summary>
+            <param name="writer">JSON을 쓰는 데 사용되는 JsonWriter 객체</param>
+            <param name="value">변환할 객체</param>
+            <param name="serializer">사용되는 JsonSerializer</param>
+        </member>
+        <member name="T:WardGames.Web.Apple.AppStoreConnect.AppStoreConnectAPIVersion">
+            <summary>
+            AppStore Connect API version.
+            </summary>
+        </member>
+        <member name="F:WardGames.Web.Apple.AppStoreConnect.AppStoreConnectAPIVersion.v1">
+            <summary>
+            Represents AppStore Connect API version 1.
+            </summary>
+        </member>
+        <member name="F:WardGames.Web.Apple.AppStoreConnect.AppStoreConnectAPIVersion.v2">
+            <summary>
+            Represents AppStore Connect API version 2.
+            </summary>
+        </member>
+        <member name="T:WardGames.Web.Apple.AppStoreConnect.AppStoreConnectClient">
+            <summary>
+            AppStoreConnect API를 사용하기 위한 클라이언트 클래스
+            </summary>
+        </member>
+        <member name="F:WardGames.Web.Apple.AppStoreConnect.AppStoreConnectClient.AppId">
+            <summary>
+            App Id
+            </summary>
+        </member>
+        <member name="F:WardGames.Web.Apple.AppStoreConnect.AppStoreConnectClient.PrivateKeyId">
+            <summary>
+            Private Key Id
+            </summary>
+        </member>
+        <member name="F:WardGames.Web.Apple.AppStoreConnect.AppStoreConnectClient.IssuerId">
+            <summary>
+            Issuer Id
+            </summary>
+        </member>
+        <member name="F:WardGames.Web.Apple.AppStoreConnect.AppStoreConnectClient.BundleId">
+            <summary>
+            Bundle Id
+            </summary>
+        </member>
+        <member name="F:WardGames.Web.Apple.AppStoreConnect.AppStoreConnectClient._key">
+            <summary>
+            PEM key
+            </summary>
+        </member>
+        <member name="M:WardGames.Web.Apple.AppStoreConnect.AppStoreConnectClient.#ctor(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            AppStoreConnectClient 클래스의 생성자
+            각 인자들은 AppStoreConnect API를 사용하기 위한 인증 정보
+            </summary>
+            <param name="appId"></param>
+            <param name="issuerId"></param>
+            <param name="bundleId"></param>
+            <param name="privateKeyId"></param>
+            <param name="key"></param>
+        </member>
+        <member name="M:WardGames.Web.Apple.AppStoreConnect.AppStoreConnectClient.GetAppStoreInfoAsync(System.String)">
+            <summary>
+            AppStore 정보를 가져오는 비동기 메서드
+            </summary>
+            <param name="url"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WardGames.Web.Apple.AppStoreConnect.AppStoreConnectClient.Dispose">
+            <summary>
+            관리되지 않는 리소스를 해제합니다.
+            </summary>
+        </member>
+        <member name="T:WardGames.Web.Apple.AppStoreConnect.AppStoreConnectLinks">
+            <summary>
+            App Store Connect API의 Object 일부에 포함되어 있는 특정 endpoint의 url 값을 표현하는 클래스
+            </summary>
+        </member>
+        <member name="P:WardGames.Web.Apple.AppStoreConnect.AppStoreConnectLinks.Url">
+            <summary>
+            타깃 endpont 주소
+            (warning) 해당 값은 App Store Connect API의 links 값 중, related 값임.
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:WardGames.Web.Apple.AppStoreConnect.AppStoreConnectQueryParamBase">
+            <summary>
+            App Store Connect Query관련 API 호출 시, 옵션으로 넣을 수 있는 Query Param의 base 클래스 
+            Value로 사용될 수 있는 옵션은, 서브 클래스에서 enum으로 구현.
+            </summary>
+        </member>
+        <member name="P:WardGames.Web.Apple.AppStoreConnect.AppStoreConnectQueryParamBase.Key">
+            <summary>
+            Query Param의 Key. 
+            <see cref="T:WardGames.Web.Apple.AppStoreConnect.AppStoreConnectQueryParamField"/>와 <see cref="T:WardGames.Web.Apple.AppStoreConnect.AppStoreConnectQueryParamFilter"/> 는 반드시 해당 값 명시 필요.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:WardGames.Web.Apple.AppStoreConnect.AppStoreConnectQueryParamBase.Values">
+            <summary>
+            Query Param의 value array
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WardGames.Web.Apple.AppStoreConnect.AppStoreConnectQueryParamBase.SetValues``1(``0[])">
+            <summary>
+            Query Param의 Value를 셋업하는 메서드. 
+            하위 클래스 생성자에서 반드시 호출 필요.
+            </summary>
+            <param name="options"></param>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:WardGames.Web.Apple.AppStoreConnect.AppStoreConnectQueryParamBase.AddValue``1(``0)">
+            <summary>
+            Query Param에 value를 추가.  
+            </summary>
+            <param name="option"></param>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:WardGames.Web.Apple.AppStoreConnect.AppStoreConnectQueryParamContainer">
+            <summary>
+            App Store Connect에서 Query 관련 API를 호출할 때, 
+            옵션으로 넣을 수 있는 <see cref="T:WardGames.Web.Apple.AppStoreConnect.AppStoreConnectQueryParamBase"/>들을 패키징하는 클래스
+            컨테이너에 포함될 수 있는 Query Param은 서브 클래스에서 프로퍼티로 선언하여 구현.
+            </summary>
+        </member>
+        <member name="P:WardGames.Web.Apple.AppStoreConnect.AppStoreConnectQueryParamContainer.QueryParams">
+            <summary>
+            Query Param의 리스트
+            </summary>
+            <value></value>
+        </member>
+        <member name="M:WardGames.Web.Apple.AppStoreConnect.AppStoreConnectQueryParamContainer.#ctor">
+            <summary>
+            Container 생성자. QueryParams에 빈 리스트 생성.
+            </summary>
+        </member>
+        <member name="T:WardGames.Web.Apple.AppStoreConnect.AppStoreConnectQueryParamField">
+            <summary>
+            App Store Connect Query API 호출 시, 사용할 수 있는 Query Param 중, 
+            외부 include에서 필터링할 수 있는 옵션인 Field param 클래스. 
+            </summary>
+        </member>
+        <member name="P:WardGames.Web.Apple.AppStoreConnect.AppStoreConnectQueryParamField.IncludeValue">
+            <summary>
+            해당 Field param 구현 시, 반드시 포함시켜야 하는 include 값
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:WardGames.Web.Apple.AppStoreConnect.AppStoreConnectQueryParamFilter">
+            <summary>
+            App Store Connect Query API 호출 시, 사용할 수 있는 Query Param 중, 
+            응답 결과인 Response의 내부에서 필터링하여 Query할 수 있는 옵션인 Filter param 클래스. 
+            </summary>
+        </member>
+        <member name="T:WardGames.Web.Apple.AppStoreConnect.AppStoreConnectQueryParamInclude">
+            <summary>
+            App Store Connect Query API 호출 시, 사용할 수 있는 Query Param 중 
+            응답 결과인 Response 이외에, 다른 결과 값을 포함하고 싶을 때 사용하는 옵션인 include param 클래스.
+            </summary>
+        </member>
+        <member name="P:WardGames.Web.Apple.AppStoreConnect.AppStoreConnectQueryParamInclude.Key">
+            <summary>
+            기본 Key 값. 단순 key값 표시 용이며 사용하지는 않음.
+            </summary>
+        </member>
+        <member name="T:WardGames.Web.Apple.AppStoreConnect.AppStoreConnectAPIResponse">
+            <summary>
+            모든 App Store Connect API response에 공통적으로 포함될 수 있는 데이터를 담은 base 클래스
+            </summary>
+        </member>
+        <member name="P:WardGames.Web.Apple.AppStoreConnect.AppStoreConnectAPIResponse.Included">
+            <summary>
+            GET API 호출시 include 파라미터에 들어간 API Object의 리스트
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:WardGames.Web.Apple.AppStoreConnect.IAppStoreConnectAPIEndpoint">
+            <summary>
+            App Store Connect API Endpoint.
+            </summary>
+        </member>
+        <member name="P:WardGames.Web.Apple.AppStoreConnect.IAppStoreConnectAPIEndpoint.Endpoint">
+            <summary>
+            App Store Connect API Endpoint.
+            </summary>
+        </member>
+        <member name="P:WardGames.Web.Apple.AppStoreConnect.IAppStoreConnectAPIEndpoint.PathPram">
+            <summary>
+            App Store Connect API Endpoint Path Parameter.
+            </summary>
+        </member>
+        <member name="T:WardGames.Web.Apple.AppStoreConnect.IAppStoreConnectAPIObject">
+            <summary>
+            App Store Connect에서 API 요청 결과 응답으로 받아올 수 있는 오브젝트들의 인터페이스
+            </summary>
+        </member>
+        <member name="T:WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.InAppPurchaseLocalization.ListAllLocalizationsEndpoint">
+            <summary>
+            특정 IAP와 연결된 모든 지역의 Localization 메타 데이터를 얻어올 수 있는 App Store Connect API endpoint.
+            </summary>
+        </member>
+        <member name="F:WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.InAppPurchaseLocalization.ListAllLocalizationsEndpoint._pathParam">
+            <summary>
+            input : IAP v2 ID
+            </summary>
+            <value></value>
+        </member>
+        <member name="M:WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.InAppPurchaseLocalization.ListAllLocalizationsEndpoint.GetListAllLocalizations(WardGames.Web.Apple.AppStoreConnect.AppStoreConnectClient,System.String)">
+            <summary>
+            App Store Connect로부터 타겟 IAP와 연관된 모든 지역의 Localization 메타 데이터를 얻어옵니다.
+            </summary>
+            <param name="client"></param>
+            <param name="iapId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.InAppPurchaseLocalization.InAppPurchaseLocalization">
+            <summary>
+            IAP의 지역별 메타데이터 클래스
+            InAppPurchaseLocalization을 Query param에서 Include할 시, 이 클래스로 Deserialize됨.
+            https://developer.apple.com/documentation/appstoreconnectapi/inapppurchaselocalization
+            </summary>
+        </member>
+        <member name="P:WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.InAppPurchaseLocalization.InAppPurchaseLocalization.Attributes">
+            <summary>
+            IAP 속성 데이터
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.InAppPurchaseLocalization.InAppPurchaseLocalizationAttributes">
+            <summary>
+            IAP의 지역별 상품 메타데이터의 속성값을 담고 있는 클래스
+            https://developer.apple.com/documentation/appstoreconnectapi/inapppurchaselocalization/attributes
+            </summary>
+        </member>
+        <member name="P:WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.InAppPurchaseLocalization.InAppPurchaseLocalizationAttributes.Locale">
+            <summary>
+            지역 식별자
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.InAppPurchaseLocalization.InAppPurchaseLocalizationAttributes.Name">
+            <summary>
+            지역별 상품 이름
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.InAppPurchaseLocalization.InAppPurchaseLocalizationAttributes.Description">
+            <summary>
+            지역별 상품 상세 설명
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.InAppPurchaseLocalization.InAppPurchaseLocalizationsResponse">
+            <summary>
+            특정 IAP의 모든 지역 Localization 메타데이터를 요청했을 때 응답으로 들어오는 데이터 클래스
+            https://developer.apple.com/documentation/appstoreconnectapi/inapppurchaselocalizationsresponse
+            </summary>
+        </member>
+        <member name="P:WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.InAppPurchaseLocalization.InAppPurchaseLocalizationsResponse.Data">
+            <summary>
+            모든 지역의 <see cref="T:WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.InAppPurchaseLocalization.InAppPurchaseLocalization"/> 데이터 리스트
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.InAppPurchasePriceSchedules.ReadPriceInformationEndPoint">
+            <summary>
+            App Store Connect에서 특정 IAP의 가격 정보를 query 할 수 있는 Endpoint.
+            https://developer.apple.com/documentation/appstoreconnectapi/read_price_information_for_an_in-app_purchase_price_schedule
+            </summary>
+        </member>
+        <member name="F:WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.InAppPurchasePriceSchedules.ReadPriceInformationEndPoint._pathParam">
+            <summary>
+            input : IAP Id
+            </summary>
+            <value></value>
+        </member>
+        <member name="M:WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.InAppPurchasePriceSchedules.ReadPriceInformationEndPoint.GetInAppPurchasePricesResponse(WardGames.Web.Apple.AppStoreConnect.AppStoreConnectClient,System.String,WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.InAppPurchasePriceSchedules.ReadPriceInformationParamContainer)">
+            <summary>
+            App Store에서 가격과 관련된 데이터 Get
+            </summary>
+            <param name="client"></param>
+            <param name="iapId"> 애플에서 생성한 IAP 고유 Id </param>
+            <param name="paramContainer"><see cref="T:WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.InAppPurchasePriceSchedules.ReadPriceInformationParamContainer"/> 내부 프로퍼티 참조. </param>
+            <returns></returns>
+        </member>
+        <member name="T:WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.InAppPurchasePriceSchedules.InAppPurchasePricesResponse">
+            <summary>
+            https://developer.apple.com/documentation/appstoreconnectapi/inapppurchasepricesresponse
+            include list에 가격 정보가 포함되어 있으니, 해당 데이터를 사용할 것.
+            </summary>
+        </member>
+        <member name="T:WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.InAppPurchasePriceSchedules.ReadPriceInformationParamContainer">
+            <summary>
+            <see cref="T:WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.InAppPurchasePriceSchedules.ReadPriceInformationEndPoint"/> 에 요청을 보낼 때 필요한 query 파라미터를 패키징하는 클래스
+            </summary>
+        </member>
+        <member name="P:WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.InAppPurchasePriceSchedules.ReadPriceInformationParamContainer.Include">
+            <summary>
+            자세한 사항은 <see cref="T:WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.InAppPurchasePriceSchedules.ReadPriceInformationParamInclude.Options"/> 참조
+            </summary>
+        </member>
+        <member name="T:WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.InAppPurchasePriceSchedules.ReadPriceInformationParamInclude">
+            <summary>
+            <see cref="T:WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.InAppPurchasePriceSchedules.ReadPriceInformationEndPoint"/>의 query param 중, include 관련 옵션을 설정하는 클래스
+            </summary>
+        </member>
+        <member name="M:WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.InAppPurchasePriceSchedules.ReadPriceInformationParamInclude.#ctor(WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.InAppPurchasePriceSchedules.ReadPriceInformationParamInclude.Options[])">
+            <summary>
+            Constructor. 필요한 옵션을 배열 형태로 전달.
+            </summary>
+            <param name="options"></param>
+        </member>
+        <member name="T:WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.InAppPurchasePriceSchedules.ReadPriceInformationParamInclude.Options">
+            <summary>
+            <see cref="T:WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.InAppPurchasePriceSchedules.ReadPriceInformationEndPoint"/>의 include 옵션.
+            </summary>
+        </member>
+        <member name="F:WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.InAppPurchasePriceSchedules.ReadPriceInformationParamInclude.Options.inAppPurchasePricePoint">
+            <summary>
+            해당 IAP의 가격 정보를 포함
+            </summary>
+        </member>
+        <member name="F:WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.InAppPurchasePriceSchedules.ReadPriceInformationParamInclude.Options.territory">
+            <summary>
+            해당 IAP의 지역 정보를 포함
+            </summary>
+        </member>
+        <member name="T:WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.InAppPurchases.ListAllInAppPurchasesEndPoint">
+            <summary>
+            https://developer.apple.com/documentation/appstoreconnectapi/list_all_in-app_purchases_for_an_app
+            모든 인앱 상품의 정보를 불러옴.
+            </summary>
+        </member>
+        <member name="F:WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.InAppPurchases.ListAllInAppPurchasesEndPoint._pathParam">
+            <summary>
+            input : App Id
+            </summary>
+            <value></value>
+        </member>
+        <member name="M:WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.InAppPurchases.ListAllInAppPurchasesEndPoint.GetListAllInAppPurchases(WardGames.Web.Apple.AppStoreConnect.AppStoreConnectClient,WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.InAppPurchases.ListAllInAppPurchasesParamContainer)">
+            <summary>
+            App에 존재하는 모든 인앱구매 상품 데이터를 쿼리하고, <see cref="T:WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.InAppPurchases.InAppPurchasesV2Response"/> 반환
+            </summary>
+            <param name="client"></param>
+            <param name="queryParamsContainer"></param>
+            <returns></returns>
+        </member>
+        <member name="T:WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.InAppPurchases.ListAllInAppPurchasesPricePointsEndpoint">
+            <summary>
+            특정 IAP의 PricePoints를 GET하는 Endpoint 클래스
+            </summary>
+        </member>
+        <member name="T:WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.InAppPurchases.InAppPurchasePricePoint">
+            <summary>
+            https://developer.apple.com/documentation/appstoreconnectapi/inapppurchasepricepoint
+            </summary>
+        </member>
+        <member name="P:WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.InAppPurchases.InAppPurchasePricePoint.Attributes">
+            <summary>
+            IAP의 가격 속성
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.InAppPurchases.InAppPurchasePricePointAttributes">
+            <summary>
+            https://developer.apple.com/documentation/appstoreconnectapi/inapppurchasepricepoint/attributes
+            </summary>
+        </member>
+        <member name="P:WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.InAppPurchases.InAppPurchasePricePointAttributes.CustomerPrice">
+            <summary>
+            IAP 소비자 가격
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.InAppPurchases.InAppPurchasesV2Response">
+            <summary>
+            https://developer.apple.com/documentation/appstoreconnectapi/inapppurchasesv2response
+            </summary>
+        </member>
+        <member name="P:WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.InAppPurchases.InAppPurchasesV2Response.InAppPurchaseV2List">
+            <summary>
+            <see cref="T:WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.InAppPurchases.InAppPurchaseV2"/> 데이터의 리스트 
+            </summary>
+        </member>
+        <member name="T:WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.InAppPurchases.InAppPurchaseV2">
+            <summary>
+            https://developer.apple.com/documentation/appstoreconnectapi/inapppurchasev2
+            </summary>
+        </member>
+        <member name="P:WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.InAppPurchases.InAppPurchaseV2.Attributes">
+            <summary>
+            <see cref="T:WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.InAppPurchases.InAppPurchaseV2Attributes"/> 속성 데이터. product name과 product ID가 있음.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.InAppPurchases.InAppPurchaseV2.Id">
+            <summary>
+            IAP의 ID. App Store Connect에서 고유로 생성한 ID
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.InAppPurchases.InAppPurchaseV2Attributes">
+            <summary>
+            https://developer.apple.com/documentation/appstoreconnectapi/inapppurchasev2/attributes
+            </summary>
+        </member>
+        <member name="P:WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.InAppPurchases.InAppPurchaseV2Attributes.Name">
+            <summary>
+            IAP의 이름
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.InAppPurchases.InAppPurchaseV2Attributes.ProductId">
+            <summary>
+            IAP에 아이템을 생성한 서비스 사용자가 임의로 지정한 ID. 
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.InAppPurchases.QueryParams.FieldsInAppPurchaseContents.Key">
+            <summary>
+            Key
+            </summary>
+        </member>
+        <member name="P:WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.InAppPurchases.QueryParams.FieldsInAppPurchaseContents.IncludeValue">
+            <summary>
+            IncludeValue
+            </summary>
+        </member>
+        <member name="M:WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.InAppPurchases.QueryParams.FieldsInAppPurchaseContents.#ctor(WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.InAppPurchases.QueryParams.FieldsInAppPurchaseContents.Options[])">
+            <summary>
+            사용하고자 하는 <see cref="T:WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.InAppPurchases.QueryParams.FieldsInAppPurchaseContents.Options"/>의 배열로 초기화
+            </summary>
+            <param name="options"></param>
+        </member>
+        <member name="T:WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.InAppPurchases.QueryParams.FieldsInAppPurchaseContents.Options">
+            <summary>
+            InAppPurchasesLocalizations가 incldue 되었을 때 필터링할 필드 옵션
+            </summary>
+        </member>
+        <member name="F:WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.InAppPurchases.QueryParams.FieldsInAppPurchaseContents.Options.fileName">
+            <summary>
+            파일명
+            TODO: (설명 추가 필요)
+            </summary>
+        </member>
+        <member name="F:WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.InAppPurchases.QueryParams.FieldsInAppPurchaseContents.Options.fileSize">
+            <summary>
+            파일 크기
+            TODO: (설명 추가 필요)
+            </summary>
+        </member>
+        <member name="F:WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.InAppPurchases.QueryParams.FieldsInAppPurchaseContents.Options.inAppPurchaseV2">
+            <summary>
+            TODO: (설명 추가 필요)
+            </summary>
+        </member>
+        <member name="F:WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.InAppPurchases.QueryParams.FieldsInAppPurchaseContents.Options.lastModifiedDate">
+            <summary>
+            TODO: (설명 추가 필요)
+            </summary>
+        </member>
+        <member name="F:WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.InAppPurchases.QueryParams.FieldsInAppPurchaseContents.Options.url">
+            <summary>
+            TODO: (설명 추가 필요)
+            </summary>
+        </member>
+        <member name="T:WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.InAppPurchases.FieldsInAppPurchaseLocalizations">
+            <summary>
+            App Store Connect에서 InAppPurchase 관련 query API 호출 시, 
+            InAppPurchaseLocalizations와 관련된 데이터를 Include 하고, 
+            해당 데이터 내부에서 필터링할 필드 값을 지정하는 옵션 클래스
+            </summary>
+        </member>
+        <member name="P:WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.InAppPurchases.FieldsInAppPurchaseLocalizations.Key">
+            <summary>
+            Key
+            </summary>
+        </member>
+        <member name="P:WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.InAppPurchases.FieldsInAppPurchaseLocalizations.IncludeValue">
+            <summary>
+            IncludeValue
+            </summary>
+        </member>
+        <member name="M:WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.InAppPurchases.FieldsInAppPurchaseLocalizations.#ctor(WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.InAppPurchases.FieldsInAppPurchaseLocalizations.Options[])">
+            <summary>
+            사용하고자 하는 <see cref="T:WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.InAppPurchases.FieldsInAppPurchaseLocalizations.Options"/>의 배열로 초기화
+            </summary>
+            <param name="options"></param>
+        </member>
+        <member name="T:WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.InAppPurchases.FieldsInAppPurchaseLocalizations.Options">
+            <summary>
+            InAppPurchasesLocalizations가 incldue 되었을 때 필터링할 필드 옵션
+            </summary>
+        </member>
+        <member name="F:WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.InAppPurchases.FieldsInAppPurchaseLocalizations.Options.description">
+            <summary>
+            지역별 IAP 상세 설명
+            </summary>
+        </member>
+        <member name="F:WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.InAppPurchases.FieldsInAppPurchaseLocalizations.Options.inAppPurchaseV2">
+            <summary>
+            inAppPurchaseV2
+            </summary>
+        </member>
+        <member name="F:WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.InAppPurchases.FieldsInAppPurchaseLocalizations.Options.locale">
+            <summary>
+            지역
+            </summary>
+        </member>
+        <member name="F:WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.InAppPurchases.FieldsInAppPurchaseLocalizations.Options.name">
+            <summary>
+            지역별 IAP 이름
+            </summary>
+        </member>
+        <member name="F:WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.InAppPurchases.FieldsInAppPurchaseLocalizations.Options.state">
+            <summary>
+            지역별 IAP 상태
+            </summary>
+        </member>
+        <member name="T:WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.InAppPurchases.ListAllInAppPurchasesParamContainer">
+            <summary>
+            <see cref="T:WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.InAppPurchases.ListAllInAppPurchasesEndPoint"/> 에 Query 요청을 보낼 때 필요한 query 파라미터를 패키징하는 클래스
+            </summary>
+        </member>
+        <member name="P:WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.InAppPurchases.ListAllInAppPurchasesParamContainer.ListAllInAppPurchasesInclude">
+            <summary>
+            Include 가능 value는 <see cref="T:WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.InAppPurchases.ListAllInAppPurchasesParamInclude"/> 참조
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.InAppPurchases.ListAllInAppPurchasesParamContainer.FieldsLocalizations">
+            <summary>
+            가능한 Field value는 <see cref="T:WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.InAppPurchases.FieldsInAppPurchaseLocalizations"/> 참조 
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.InAppPurchases.ListAllInAppPurchasesParamInclude">
+            <summary>
+            <see cref="T:WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.InAppPurchases.ListAllInAppPurchasesEndPoint"/>의 query param 중, include 관련 옵션을 설정하는 클래스
+            </summary>
+        </member>
+        <member name="M:WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.InAppPurchases.ListAllInAppPurchasesParamInclude.#ctor(WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.InAppPurchases.ListAllInAppPurchasesParamInclude.Options[])">
+            <summary>
+            Constructor. 필요한 옵션을 배열 형태로 전달.
+            </summary>
+            <param name="options"></param>
+        </member>
+        <member name="T:WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.InAppPurchases.ListAllInAppPurchasesParamInclude.Options">
+            <summary>
+            <see cref="T:WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.InAppPurchases.ListAllInAppPurchasesEndPoint"/>의 include 옵션.
+            </summary>
+        </member>
+        <member name="F:WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.InAppPurchases.ListAllInAppPurchasesParamInclude.Options.appStoreReviewScreenshot">
+            <summary>
+            TODO: (설명 추가 필요)
+            </summary>
+        </member>
+        <member name="F:WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.InAppPurchases.ListAllInAppPurchasesParamInclude.Options.content">
+            <summary>
+            TODO: (설명 추가 필요)
+            </summary>
+        </member>
+        <member name="F:WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.InAppPurchases.ListAllInAppPurchasesParamInclude.Options.iapPriceSchedule">
+            <summary>
+            IAP의 가격 스케쥴링과 관련된 정보를 포함시킵니다.
+            </summary>
+        </member>
+        <member name="F:WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.InAppPurchases.ListAllInAppPurchasesParamInclude.Options.inAppPurchaseAvailability">
+            <summary>
+            TODO: (설명 추가 필요)
+            </summary>
+        </member>
+        <member name="F:WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.InAppPurchases.ListAllInAppPurchasesParamInclude.Options.inAppPurchaseLocalizations">
+            <summary>
+            IAP의 Localization(출시 지역마다의 정보)과 관련된 정보를 가져옵니다. 
+            </summary>
+        </member>
+        <member name="F:WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.InAppPurchases.ListAllInAppPurchasesParamInclude.Options.promotedPurchase">
+            <summary>
+            TODO: (설명 추가 필요)
+            </summary>
+        </member>
+        <member name="T:WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.Transaction.GetTransactionInfoEndpoint">
+            <summary>
+            App Store Connect에서 특정 IAP의 가격 정보를 query 할 수 있는 Endpoint.
+            https://developer.apple.com/documentation/appstoreconnectapi/read_price_information_for_an_in-app_purchase_price_schedule
+            </summary>
+        </member>
+        <member name="P:WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.Transaction.GetTransactionInfoEndpoint.Endpoint">
+            <summary>
+            App Store Connect API Endpoint.
+            </summary>
+        </member>
+        <member name="P:WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.Transaction.GetTransactionInfoEndpoint.PathPram">
+            <summary>
+            App Store Connect API Endpoint Path Parameter.
+            </summary>
+        </member>
+        <member name="M:WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.Transaction.GetTransactionInfoEndpoint.#ctor(System.Boolean)">
+            <summary>
+            Create GetTransactionInfoEndpoint.
+            </summary>
+            <param name="isSandBoxTest"></param>
+        </member>
+        <member name="M:WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.Transaction.GetTransactionInfoEndpoint.GetTransactionInfo(WardGames.Web.Apple.AppStoreConnect.AppStoreConnectClient,System.String,System.Boolean)">
+            <summary>
+            Get information about a single transaction for your app.
+            </summary>
+            <param name="client"></param>
+            <param name="transactionId"></param>
+            <param name="isSandBoxTest"></param>
+            <returns></returns>
+        </member>
+        <member name="T:WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.Transaction.TransactionInfoResponse">
+            <summary>
+            A response that contains signed transaction information for a single transaction.
+            </summary>
+        </member>
+        <member name="P:WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.Transaction.TransactionInfoResponse.SignedTransactionInfo">
+            <summary>
+            A customer’s in-app purchase transaction, signed by Apple, in JSON Web Signature (JWS) format.
+            </summary>
+        </member>
+        <member name="M:WardGames.Web.Apple.AppStoreConnect.AppStore.InAppPurchase.Transaction.TransactionInfoResponse.#ctor(System.String)">
+            <summary>
+            Create TransactionInfoResponse.
+            </summary>
+            <param name="signedTransactionInfo"></param>
+        </member>
+        <member name="T:WardGames.Web.Apple.AppStoreConnect.AppStore.Territories.Territory">
+            <summary>
+            https://developer.apple.com/documentation/appstoreconnectapi/territory
+            </summary>
+        </member>
+        <member name="T:WardGames.Web.Apple.AppStoreConnect.AppStore.Territories.TerritoryAttributes">
+            <summary>
+            https://developer.apple.com/documentation/appstoreconnectapi/territory/attributes
+            </summary>
+        </member>
+        <member name="T:WardGames.Web.Apple.AppStoreConnect.AppStore.JWS.DecodeBase64Helper">
+            <summary>
+            Base64 URL-safe 인코딩을 디코딩하는 Helper 클래스
+            </summary>
+        </member>
+        <member name="M:WardGames.Web.Apple.AppStoreConnect.AppStore.JWS.DecodeBase64Helper.DecodeBase64UrlToString(System.String)">
+            <summary>
+            Base64 URL-safe 인코딩을 디코딩하여 문자열로 반환합니다.
+            </summary>
+            <param name="input">Base64 URL-safe 인코딩된 문자열</param>
+            <returns>Base64 URL-safe로 디코딩된 문자열</returns>
+        </member>
+        <member name="M:WardGames.Web.Apple.AppStoreConnect.AppStore.JWS.DecodeBase64Helper.DecodeBase64UrlToBytes(System.String)">
+            <summary>
+            Base64 URL-safe 인코딩을 디코딩하여 바이트 배열로 반환합니다.
+            </summary>
+            <param name="input">Base64 URL-safe 인코딩된 문자열</param>
+            <returns>Base64 URL-safe로 디코딩된 바이트 배열</returns>
+        </member>
+        <member name="T:WardGames.Web.Apple.AppStoreConnect.AppStore.JWS.JWSTransaction">
+            <summary>
+            Transaction information signed by the App Store, in JSON Web Signature (JWS) format.
+            https://developer.apple.com/documentation/appstoreserverapi/jwstransaction
+            </summary>
+        </member>
+        <member name="P:WardGames.Web.Apple.AppStoreConnect.AppStore.JWS.JWSTransaction.JWSDecodedPayload">
+            <summary>
+            Contains transaction information signed by the App Store, in JSON Web Signature (JWS) format.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WardGames.Web.Apple.AppStoreConnect.AppStore.JWS.JWSTransaction.#ctor(System.String)">
+            <summary>
+            Create JWSTransaction.
+            </summary>
+            <param name="jwsTransaction"></param>
+        </member>
+        <member name="T:WardGames.Web.Apple.AppStoreConnect.AppStore.JWS.JWSTransactionDecodedPayload">
+            <summary>
+            A decoded payload that contains transaction information. <br/>
+            https://developer.apple.com/documentation/appstoreserverapi/jwstransactiondecodedpayload
+            </summary>
+        </member>
+        <member name="P:WardGames.Web.Apple.AppStoreConnect.AppStore.JWS.JWSTransactionDecodedPayload.TransactionId">
+            <summary>
+            The unique identifier of the transaction.
+            </summary>
+        </member>
+        <member name="P:WardGames.Web.Apple.AppStoreConnect.AppStore.JWS.JWSTransactionDecodedPayload.ProductId">
+            <summary>
+            The unique identifier of the product.
+            </summary>
+        </member>
+        <member name="P:WardGames.Web.Apple.AppStoreConnect.AppStore.JWS.JWSTransactionDecodedPayload.Environment">
+            <summary>
+            The time of the original app purchase.
+            </summary>
+        </member>
+        <member name="T:WardGames.Web.Apple.AppStoreConnect.AppStore.JWS.JwsVerifier">
+            <summary>
+            JWS 검증을 위한 클래스
+            </summary>
+        </member>
+        <member name="M:WardGames.Web.Apple.AppStoreConnect.AppStore.JWS.JwsVerifier.VerifyJws(System.String,System.String,System.String,System.String)">
+            <summary>
+            JWS 검증을 위한 클래스의 생성자
+            </summary>
+            <param name="header"></param>
+            <param name="payload"></param>
+            <param name="signature"></param>
+            <param name="x5c"></param>
+            <returns></returns>
+        </member>
+        <member name="T:WardGames.Web.Apple.AppStoreConnect.AppStore.ServerNotifications.ResponseBodyV2">
+            <summary>
+            The response body the App Store sends in a version 2 server notification. <br/>
+            https://developer.apple.com/documentation/appstoreservernotifications/responsebodyv2
+            </summary>
+        </member>
+        <member name="P:WardGames.Web.Apple.AppStoreConnect.AppStore.ServerNotifications.ResponseBodyV2.signedPayload">
+            <summary>
+            The payload in JSON Web Signature (JWS) format, signed by the App Store.
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:WardGames.Web.Apple.AppStoreConnect.AppStore.ServerNotifications.ResponseBodyV2DecodedPayload">
+            <summary>
+            A decoded payload containing the version 2 notification data.
+            </summary>
+        </member>
+        <member name="T:WardGames.Web.Apple.AppStoreConnect.AppStore.ServerNotifications.ResponseBodyV2DecodedPayloadData">
+            <summary>
+            The app metadata and the signed renewal and transaction information.
+            </summary>
+        </member>
+        <member name="P:WardGames.Web.Apple.AppStoreConnect.AppStore.ServerNotifications.ResponseBodyV2DecodedPayloadData.environment">
+            <summary>
+            The server environment that the notification applies to, either sandbox or production.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,160 @@
+{
+    "data" : [ {
+      "type" : "inAppPurchases",
+      "id" : "6451127237",
+      "attributes" : {
+        "name" : "Aiden",
+        "productId" : "wardgames.zooports.character.c0002",
+        "inAppPurchaseType" : "NON_CONSUMABLE",
+        "state" : "MISSING_METADATA",
+        "reviewNote" : null,
+        "familySharable" : false,
+        "contentHosting" : false,
+        "availableInAllTerritories" : false
+      },
+      "relationships" : {
+        "inAppPurchaseLocalizations" : {
+          "meta" : {
+            "paging" : {
+              "total" : 0,
+              "limit" : 10
+            }
+          },
+          "data" : [ ],
+          "links" : {
+            "self" : "https://api.appstoreconnect.apple.com/v2/inAppPurchases/6451127237/relationships/inAppPurchaseLocalizations",
+            "related" : "https://api.appstoreconnect.apple.com/v2/inAppPurchases/6451127237/inAppPurchaseLocalizations"
+          }
+        },
+        "pricePoints" : {
+          "links" : {
+            "self" : "https://api.appstoreconnect.apple.com/v2/inAppPurchases/6451127237/relationships/pricePoints",
+            "related" : "https://api.appstoreconnect.apple.com/v2/inAppPurchases/6451127237/pricePoints"
+          }
+        },
+        "content" : {
+          "links" : {
+            "self" : "https://api.appstoreconnect.apple.com/v2/inAppPurchases/6451127237/relationships/content",
+            "related" : "https://api.appstoreconnect.apple.com/v2/inAppPurchases/6451127237/content"
+          }
+        },
+        "appStoreReviewScreenshot" : {
+          "links" : {
+            "self" : "https://api.appstoreconnect.apple.com/v2/inAppPurchases/6451127237/relationships/appStoreReviewScreenshot",
+            "related" : "https://api.appstoreconnect.apple.com/v2/inAppPurchases/6451127237/appStoreReviewScreenshot"
+          }
+        },
+        "promotedPurchase" : {
+          "links" : {
+            "self" : "https://api.appstoreconnect.apple.com/v2/inAppPurchases/6451127237/relationships/promotedPurchase",
+            "related" : "https://api.appstoreconnect.apple.com/v2/inAppPurchases/6451127237/promotedPurchase"
+          }
+        },
+        "iapPriceSchedule" : {
+          "links" : {
+            "self" : "https://api.appstoreconnect.apple.com/v2/inAppPurchases/6451127237/relationships/iapPriceSchedule",
+            "related" : "https://api.appstoreconnect.apple.com/v2/inAppPurchases/6451127237/iapPriceSchedule"
+          }
+        },
+        "inAppPurchaseAvailability" : {
+          "links" : {
+            "self" : "https://api.appstoreconnect.apple.com/v2/inAppPurchases/6451127237/relationships/inAppPurchaseAvailability",
+            "related" : "https://api.appstoreconnect.apple.com/v2/inAppPurchases/6451127237/inAppPurchaseAvailability"
+          }
+        }
+      },
+      "links" : {
+        "self" : "https://api.appstoreconnect.apple.com/v2/inAppPurchases/6451127237"
+      }
+    }, {
+      "type" : "inAppPurchases",
+      "id" : "6450658665",
+      "attributes" : {
+        "name" : "Billy",
+        "productId" : "C_0001",
+        "inAppPurchaseType" : "NON_CONSUMABLE",
+        "state" : "MISSING_METADATA",
+        "reviewNote" : null,
+        "familySharable" : false,
+        "contentHosting" : false,
+        "availableInAllTerritories" : true
+      },
+      "relationships" : {
+        "inAppPurchaseLocalizations" : {
+          "meta" : {
+            "paging" : {
+              "total" : 1,
+              "limit" : 10
+            }
+          },
+          "data" : [ {
+            "type" : "inAppPurchaseLocalizations",
+            "id" : "cbf40912-3487-46b8-ae89-30d1b39243a1"
+          } ],
+          "links" : {
+            "self" : "https://api.appstoreconnect.apple.com/v2/inAppPurchases/6450658665/relationships/inAppPurchaseLocalizations",
+            "related" : "https://api.appstoreconnect.apple.com/v2/inAppPurchases/6450658665/inAppPurchaseLocalizations"
+          }
+        },
+        "pricePoints" : {
+          "links" : {
+            "self" : "https://api.appstoreconnect.apple.com/v2/inAppPurchases/6450658665/relationships/pricePoints",
+            "related" : "https://api.appstoreconnect.apple.com/v2/inAppPurchases/6450658665/pricePoints"
+          }
+        },
+        "content" : {
+          "links" : {
+            "self" : "https://api.appstoreconnect.apple.com/v2/inAppPurchases/6450658665/relationships/content",
+            "related" : "https://api.appstoreconnect.apple.com/v2/inAppPurchases/6450658665/content"
+          }
+        },
+        "appStoreReviewScreenshot" : {
+          "links" : {
+            "self" : "https://api.appstoreconnect.apple.com/v2/inAppPurchases/6450658665/relationships/appStoreReviewScreenshot",
+            "related" : "https://api.appstoreconnect.apple.com/v2/inAppPurchases/6450658665/appStoreReviewScreenshot"
+          }
+        },
+        "promotedPurchase" : {
+          "links" : {
+            "self" : "https://api.appstoreconnect.apple.com/v2/inAppPurchases/6450658665/relationships/promotedPurchase",
+            "related" : "https://api.appstoreconnect.apple.com/v2/inAppPurchases/6450658665/promotedPurchase"
+          }
+        },
+        "iapPriceSchedule" : {
+          "links" : {
+            "self" : "https://api.appstoreconnect.apple.com/v2/inAppPurchases/6450658665/relationships/iapPriceSchedule",
+            "related" : "https://api.appstoreconnect.apple.com/v2/inAppPurchases/6450658665/iapPriceSchedule"
+          }
+        },
+        "inAppPurchaseAvailability" : {
+          "links" : {
+            "self" : "https://api.appstoreconnect.apple.com/v2/inAppPurchases/6450658665/relationships/inAppPurchaseAvailability",
+            "related" : "https://api.appstoreconnect.apple.com/v2/inAppPurchases/6450658665/inAppPurchaseAvailability"
+          }
+        }
+      },
+      "links" : {
+        "self" : "https://api.appstoreconnect.apple.com/v2/inAppPurchases/6450658665"
+      }
+    } ],
+    "included" : [ {
+      "type" : "inAppPurchaseLocalizations",
+      "id" : "cbf40912-3487-46b8-ae89-30d1b39243a1",
+      "attributes" : {
+        "name" : "Billy",
+        "description" : "Billy Billy ^^"
+      },
+      "links" : {
+        "self" : "https://api.appstoreconnect.apple.com/v1/inAppPurchaseLocalizations/cbf40912-3487-46b8-ae89-30d1b39243a1"
+      }
+    } ],
+    "links" : {
+      "self" : "https://api.appstoreconnect.apple.com/v1/apps/6448715516/inAppPurchasesV2?include=inAppPurchaseLocalizations&fields%5BinAppPurchaseLocalizations%5D=name%2Cdescription"
+    },
+    "meta" : {
+      "paging" : {
+        "total" : 2,
+        "limit" : 50
+      }
+    }
+  }

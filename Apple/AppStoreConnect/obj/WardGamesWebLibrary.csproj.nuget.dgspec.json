@@ -1,0 +1,76 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/sinjongha/wkspaces/WardGamesDevLibrary/WardGamesWebLibrary/CSharp/WardGamesWebLibrary.csproj": {}
+  },
+  "projects": {
+    "/Users/sinjongha/wkspaces/WardGamesDevLibrary/WardGamesWebLibrary/CSharp/WardGamesWebLibrary.csproj": {
+      "version": "0.2.5",
+      "restore": {
+        "projectUniqueName": "/Users/sinjongha/wkspaces/WardGamesDevLibrary/WardGamesWebLibrary/CSharp/WardGamesWebLibrary.csproj",
+        "projectName": "WardGames.Web",
+        "projectPath": "/Users/sinjongha/wkspaces/WardGamesDevLibrary/WardGamesWebLibrary/CSharp/WardGamesWebLibrary.csproj",
+        "packagesPath": "/Users/sinjongha/.nuget/packages/",
+        "outputPath": "/Users/sinjongha/wkspaces/WardGamesDevLibrary/WardGamesWebLibrary/CSharp/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/sinjongha/wkspaces/WardGamesDevLibrary/WardGamesWebLibrary/CSharp/NuGet.Config",
+          "/Users/sinjongha/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://pkgs.dev.azure.com/wardgames/_packaging/WardGames/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[6.31.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.31.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.302/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
