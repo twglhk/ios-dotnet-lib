@@ -82,3 +82,8 @@ dotnet nuget push {path} --source zooports-the-football-nuget --api-key az
 ```
 - {version} : 배포하고자 하는 nupkg의 버전을 작성
 - --source : 위 nuget.config 파일에서 작성한 packageSources 이름과 동일하게 작성
+
+--- 
+
+## 업데이트 로그
+- 기존 Azure Devops에 있던 라이브러리를 GitHub으로 이전하였습니다.
